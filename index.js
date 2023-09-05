@@ -9,13 +9,9 @@ const commandOne = `certutil -hashfile ${fileOne} MD5`
 const fileTwo = path.join('resources/archivo-dos.txt')
 const commandTwo = `certutil -hashfile ${fileTwo} MD5`
 
-const promiseOne = () => {
-    return execCommand(fileOne, commandOne);
-};
+const promiseOne = () => execCommand(fileOne, commandOne);
 
-const promiseTwo = () => {
-    return execCommand(fileTwo, commandTwo);
-}
+const promiseTwo = () =>execCommand(fileTwo, commandTwo);
 
 const execCommand = (file, command) => {
     return new Promise((resolve, reject) => {
