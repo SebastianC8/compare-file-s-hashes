@@ -11,7 +11,7 @@ const commandTwo = `certutil -hashfile ${fileTwo} MD5`
 
 const promiseOne = () => execCommand(fileOne, commandOne);
 
-const promiseTwo = () =>execCommand(fileTwo, commandTwo);
+const promiseTwo = () => execCommand(fileTwo, commandTwo);
 
 const execCommand = (file, command) => {
     return new Promise((resolve, reject) => {
@@ -34,7 +34,7 @@ const execCommand = (file, command) => {
                     }
                 })
             } else {
-                console.log('El archivo no existe en la ubicación especificada.');
+                reject('El archivo no existe en la ubicación especificada.');
             }
         });
     });
